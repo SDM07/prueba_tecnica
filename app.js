@@ -52,15 +52,18 @@ fetch(url,{
     body: JSON.stringify(data3)
 }).then(res => res.json())
 .catch(error => console.error('login:', error))
-.then(response => {
+.then((response) => {
     console.log('login:', response) 
     let tabla_muni = document.getElementById('lista-muni')
-    tabla_muni.innerHTML = `<tr>
-        <td>
-            <a href='instituciones.html'>${response.option}</a>
-        </td>
-    </tr>`; 
-});
+    for (const i in response.data) {
+        console.log(response.data[i])
+        tabla_muni.innerHTML += `<tr>
+            <td>
+                <a href='instituciones.html'>${response.data[i].nombre}</a>
+            </td>
+        </tr>`;  
+    }
+})
 
 //      caso 4      //
 
@@ -79,15 +82,18 @@ fetch(url,{
     body: JSON.stringify(data4)
 }).then(res => res.json())
 .catch(error => console.error('login:', error))
-.then(response => {
+.then((response) => {
     console.log('login:', response) 
-    let tabla_inst = document.getElementById('lista-inst')
-    tabla_inst.innerHTML = `<tr>
-        <td>
-            <a href='sedes.html'>${response.option}</a>
-        </td>
-    </tr>`; 
-});
+    let tabla_muni = document.getElementById('lista-inst')
+    for (const i in response.data) {
+        console.log(response.data[i])
+        tabla_muni.innerHTML += `<tr>
+            <td>
+                <a href='sedes.html'>${response.data[i].nombre}</a>
+            </td>
+        </tr>`;  
+    }
+})
 
 //      caso 5      //
 
@@ -106,15 +112,18 @@ fetch(url,{
     body: JSON.stringify(data5)
 }).then(res => res.json())
 .catch(error => console.error('login:', error))
-.then(response => {
+.then((response) => {
     console.log('login:', response) 
-    let tabla_sede = document.getElementById('lista-sed')
-    tabla_sede.innerHTML = `<tr>
-        <td>
-            <a href='grupos.html'>${response.option}</a>
-        </td>
-    </tr>`; 
-});
+    let tabla_muni = document.getElementById('lista-sed')
+    for (const i in response.data) {
+        console.log(response.data[i])
+        tabla_muni.innerHTML += `<tr>
+            <td>
+                <a href='grupos.html'>${response.data[i].nombre}</a>
+            </td>
+        </tr>`;  
+    }
+})
 
 //      caso 6      //
 
@@ -133,15 +142,18 @@ fetch(url,{
     body: JSON.stringify(data6)
 }).then(res => res.json())
 .catch(error => console.error('login:', error))
-.then(response => {
+.then((response) => {
     console.log('login:', response) 
-    let tabla_gru = document.getElementById('lista-grup')
-    tabla_gru.innerHTML = `<tr>
-        <td>
-            <a href='info_grup.html'>${response.option}</a>
-        </td>
-    </tr>`; 
-});
+    let tabla_muni = document.getElementById('lista-grup')
+    for (const i in response.data) {
+        console.log(response.data[i])
+        tabla_muni.innerHTML += `<tr>
+            <td>
+                <a href='info_grup.html'>${response.data[i].nombre}</a>
+            </td>
+        </tr>`;  
+    }
+})
 
 //      caso 7      //
 
@@ -160,12 +172,27 @@ fetch(url,{
     body: JSON.stringify(data7)
 }).then(res => res.json())
 .catch(error => console.error('login:', error))
-.then(response => {
+.then((response) => {
     console.log('login:', response) 
-    let tabla_info = document.getElementById('lista-info')
-    tabla_info.innerHTML = `<tr>
-        <td>
-            ${response.option}
-        </td>
-    </tr>`; 
-});
+    let tabla_muni = document.getElementById('lista-info')
+    for (const i in response.data) {
+        console.log(response.data[i])
+        tabla_muni.innerHTML += `<tr>
+            <td>
+                ${response.data[i].institución}
+            </td>
+            <td>
+                ${response.data[i].municipio}
+            </td>
+            <td>
+                ${response.data[i].nombre}
+            </td>
+            <td>
+                ${response.data[i].numGrupo}
+            </td>
+            <td>
+                ${response.data[i].sede}
+            </td>
+        </tr>`;  
+    }
+})
