@@ -1,0 +1,21 @@
+Competencia: Resolución de problemas: A continuación, se le plantean dos situaciones donde deberá plantear 
+la solución detallando los pasos y justificando cada uno de ellos 
+1. Usted se encuentra realizando un desarrollo para una importante compañía TI, 
+¿qué etapas considera se deben tener en cuenta para que el desarrollo cumpla con los requerimientos planteados 
+y el cliente quede satisfecho? Justifique las etapas. 
+
+SOLUCION:
+Primero necesitaría la información o documentación necesaria para analizar la problemática del cliente, y así 
+plantear o proponerle una solución adecuada, luego, buscaría una metodología ágil como el scrum que me permita 
+abarcar una adecuada planeación del desarrollo por etapas, en el caso de scrum sería por la practicidad que me 
+brindan los sprints para la planeación y ejecución de los mismo, seguidamente, llevaría un control de dichos 
+sprints acorde al tiempo establecido, para finalizar y entregar la aplicación o el producto final al cliente.
+
+2. Se le entrega una aplicación Web que presenta un error por compatibilidad de librerías (Archivos no actualizados).
+Cuál sería su plan para abordar este error y dejar funcionando la aplicación Web.
+
+SOLUCION:
+Primero preguntaría si es pertinente actualizar los archivos, ya que puede que la compañía no permita actualizar 
+sus archivos por lo que conllevaría a una migración exhaustiva de todos los archivos de la empresa, según la decisión 
+o respuesta que se tome actualizaría esos archivos o buscaría versiones anteriores de esas librerías que sean 
+compatibles con la aplicación para darle solución al error.
